@@ -45,14 +45,10 @@ function PersonalInfo({name, birthday, phone, email, description}) {
 function Timeline({experience, education}){
     const expStartYears = experience.map(job => (new Date(job.startDate)).getFullYear());
     const expEndYears = experience.map(job => (new Date(job.endDate)).getFullYear());
-    const expNames = experience.map(job => job.company);
-    const expColors = experience.map(job => job.color);
     const expMinYear = Math.min(...expStartYears);
 
     const eduStartYears = education.map(school => (new Date(school.startDate)).getFullYear());
     const eduEndYears = education.map(school => (new Date(school.endDate)).getFullYear());
-    const eduNames = education.map(school => school.abbreviation);
-    const eduColors = experience.map(school => school.color);
     const eduMinYear = Math.min(...eduStartYears);
 
     let minYear = expMinYear;
@@ -81,44 +77,44 @@ function Timeline({experience, education}){
         years.push(i);
 
         if(expEndYears[expIndex] == i){
-            jobs.push({name: expCurrent, colspan: expPadding, color: expColor});
+            jobs.push({experience: experience[expIndex], colspan: expPadding});
             expCurrent = "";
             expColor = "";
             expIndex++;
         }
         if(expStartYears[expIndex] == i){
-            expCurrent = expNames[expIndex];
-            expColor = expColors[expIndex];
+            expCurrent = experience[expIndex].company;
+            expColor = experience[expIndex].color;
             expPadding = 0;
         }
         if(expCurrent == ""){
-            jobs.push({name: expCurrent, colspan: 1});
+            jobs.push({experience: {}, colspan: 1});
         } else {
             expPadding++;
         }
 
         if(eduEndYears[eduIndex] == i){
-            schools.push({name: eduCurrent, colspan: eduPadding, color: eduColor});
+            schools.push({education: education[eduIndex], colspan: eduPadding});
             eduCurrent = "";
             eduColor = "";
             eduIndex++;
         }
         if(eduStartYears[eduIndex] == i){
-            eduCurrent = eduNames[eduIndex];
-            eduColor = eduColors[eduIndex];
+            eduCurrent = education[eduIndex].abbreviation;
+            eduColor = education[eduIndex].color;
             eduPadding = 0;
         }
         if(eduCurrent == ""){
-            schools.push({name: eduCurrent, colspan: 1});
+            schools.push({education: {}, colspan: 1});
         } else {
             eduPadding++;
         }
     }
     if(expCurrent != ""){
-        jobs.push({name: expCurrent, colspan: expPadding, color: expColor});
+        jobs.push({experience: experience[expIndex], colspan: expPadding});
     }
     if(eduCurrent != ""){
-        schools.push({name: eduCurrent, colspan: eduPadding, color: eduColor});
+        schools.push({education: education[eduIndex], colspan: eduPadding});
     }
 
     const nYears = years.map( year => {
@@ -129,7 +125,7 @@ function Timeline({experience, education}){
 
     const nJobs = jobs.map( job => {
         if(job.name != ""){
-            return(<td className={job.color} colspan={job.colspan}>{job.name}</td>);
+            return(<td className={job.experience.color} colspan={job.colspan}><div onClick={() => alert(job.experience.roles)}>{job.experience.company}</div></td>);
         } else {
             return(<td></td>);
         }
@@ -137,7 +133,7 @@ function Timeline({experience, education}){
 
     const nSchools = schools.map( school => {
         if(school.name != ""){
-            return(<td className={school.color} colspan={school.colspan}>{school.name}</td>);
+            return(<td className={school.education.color} colspan={school.colspan}><div onClick={() => alert(school.education.name)}>{school.education.abbreviation}</div></td>);
         } else {
         return(<td></td>);
         }
