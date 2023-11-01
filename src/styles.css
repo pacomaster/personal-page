@@ -45,6 +45,10 @@ ul {
     margin: 0 auto;
 }
 
+.timeline {
+    text-align: center;
+}
+
 table, th, td {
     border: 1px solid black;
 }

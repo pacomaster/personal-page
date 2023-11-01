@@ -72,29 +72,50 @@ function Timeline({experience, education}){
 
     let expCurrent = "";
     let expIndex = 0;
+    let expPadding = 1;
+
     let eduCurrent = "";
     let eduIndex = 0;
+    let eduPadding = 1;
 
     for(let i = minYear; i <= maxYear; i++){
         years.push(i);
 
         if(expEndYears[expIndex] == i){
+            jobs.push({name: expCurrent, colspan: expPadding});
             expCurrent = "";
             expIndex++;
         }
         if(expStartYears[expIndex] == i){
             expCurrent = expNames[expIndex];
+            expPadding = 0;
         }
-        jobs.push(expCurrent);
+        if(expCurrent == ""){
+            jobs.push({name: expCurrent, colspan: 1});
+        } else {
+            expPadding++;
+        }
 
         if(eduEndYears[eduIndex] == i){
+            schools.push({name: eduCurrent, colspan: eduPadding});
             eduCurrent = "";
             eduIndex++;
         }
         if(eduStartYears[eduIndex] == i){
             eduCurrent = eduNames[eduIndex];
+            eduPadding = 0;
         }
-        schools.push(eduCurrent);
+        if(eduCurrent == ""){
+            schools.push({name: eduCurrent, colspan: 1});
+        } else {
+            eduPadding++;
+        }
+    }
+    if(expCurrent != ""){
+        jobs.push({name: expCurrent, colspan: expPadding});
+    }
+    if(eduCurrent != ""){
+        schools.push({name: eduCurrent, colspan: eduPadding});
     }
 
     const nYears = years.map( year => {
@@ -105,18 +126,18 @@ function Timeline({experience, education}){
 
     const nJobs = jobs.map( job => {
         return(
-            <td>{job}</td>
+            <td colspan={job.colspan}>{job.name}</td>
         );
     });
 
     const nSchools = schools.map( school => {
         return(
-            <td>{school}</td>
+            <td colspan={school.colspan}>{school.name}</td>
         );
     });
 
     return(
-        <div>
+        <div className="timeline">
             <table>
                 <tr>
                     {nJobs}
