@@ -46,9 +46,22 @@ ul {
 }
 
 .timeline {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 0px solid black;
+}
+
+td.blue {
+    border: 3px solid blue;
+}
+
+td.red {
+    border: 3px solid red;
+}
+
+td.green {
+    border: 3px solid green;
 }
