@@ -45,6 +45,10 @@ ul {
     margin: 0 auto;
 }
 
+ul li{
+    width: 25%;
+}
+
 .timeline {
     display: flex;
     justify-content: center;

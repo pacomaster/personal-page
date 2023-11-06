@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Tooltip } from 'react-tooltip'
+import ReactDOMServer from 'react-dom/server';
 import passportPhoto from './img/passport.jpg';
 import cvData from './data/francisco.js';
 
@@ -43,6 +45,8 @@ function PersonalInfo({name, birthday, phone, email, description}) {
 }
 
 function Timeline({experience, education}){
+    const [experiences, setExperiences] = useState([]);
+
     const expStartYears = experience.map(job => (new Date(job.startDate)).getFullYear());
     const expEndYears = experience.map(job => (new Date(job.endDate)).getFullYear());
     const expMinYear = Math.min(...expStartYears);
@@ -117,6 +121,18 @@ function Timeline({experience, education}){
         schools.push({education: education[eduIndex], colspan: eduPadding});
     }
 
+    function getTooltip(experience){
+        return (
+            <div>
+                <div>{experience.roles}</div>
+                <ul>
+                    <li>{experience.projects}</li>
+                </ul>
+                <div>{experience.technologies}</div>
+            </div>
+        );
+    }
+
     const nYears = years.map( year => {
         return(
             <td>{year}</td>
@@ -124,8 +140,9 @@ function Timeline({experience, education}){
     });
 
     const nJobs = jobs.map( job => {
+        const tooltip = getTooltip(job.experience);
         if(job.name != ""){
-            return(<td className={job.experience.color} colspan={job.colspan}><div onClick={() => alert(job.experience.roles)}>{job.experience.company}</div></td>);
+            return(<td className={job.experience.color} colspan={job.colspan}><Tooltip id="my-tooltip" /><a data-tooltip-id="my-tooltip" data-tooltip-html={ReactDOMServer.renderToStaticMarkup(tooltip)}>{job.experience.company}</a></td>);
         } else {
             return(<td></td>);
         }
