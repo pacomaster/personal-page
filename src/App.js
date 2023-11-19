@@ -13,7 +13,7 @@ export default function Main() {
     return (
         <div className="main">
             <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} description={personal.description} />
-            <hr class="solid"/>
+            <hr className="solid"/>
             <Timeline experience={experience} education={education} />
         </div>
         );
@@ -39,14 +39,12 @@ function PersonalInfo({name, birthday, phone, email, description}) {
                 <div>{phone}</div>
                 <div>{email}</div>
             </div>
-            <div>{description}</div>
+            <div className="description">{description}</div>
         </div>
         );
 }
 
 function Timeline({experience, education}){
-    const [experiences, setExperiences] = useState([]);
-
     const expStartYears = experience.map(job => (new Date(job.startDate)).getFullYear());
     const expEndYears = experience.map(job => (new Date(job.endDate)).getFullYear());
     const expMinYear = Math.min(...expStartYears);
@@ -81,7 +79,7 @@ function Timeline({experience, education}){
         years.push(i);
 
         if(expEndYears[expIndex] == i){
-            jobs.push({experience: experience[expIndex], colspan: expPadding});
+            jobs.push({experience: experience[expIndex], colSpan: expPadding});
             expCurrent = "";
             expColor = "";
             expIndex++;
@@ -92,13 +90,13 @@ function Timeline({experience, education}){
             expPadding = 0;
         }
         if(expCurrent == ""){
-            jobs.push({experience: {}, colspan: 1});
+            jobs.push({experience: {}, colSpan: 1});
         } else {
             expPadding++;
         }
 
         if(eduEndYears[eduIndex] == i){
-            schools.push({education: education[eduIndex], colspan: eduPadding});
+            schools.push({education: education[eduIndex], colSpan: eduPadding});
             eduCurrent = "";
             eduColor = "";
             eduIndex++;
@@ -109,28 +107,16 @@ function Timeline({experience, education}){
             eduPadding = 0;
         }
         if(eduCurrent == ""){
-            schools.push({education: {}, colspan: 1});
+            schools.push({education: {}, colSpan: 1});
         } else {
             eduPadding++;
         }
     }
     if(expCurrent != ""){
-        jobs.push({experience: experience[expIndex], colspan: expPadding});
+        jobs.push({experience: experience[expIndex], colSpan: expPadding});
     }
     if(eduCurrent != ""){
-        schools.push({education: education[eduIndex], colspan: eduPadding});
-    }
-
-    function getTooltip(experience){
-        return (
-            <div>
-                <div>{experience.roles}</div>
-                <ul>
-                    <li>{experience.projects}</li>
-                </ul>
-                <div>{experience.technologies}</div>
-            </div>
-        );
+        schools.push({education: education[eduIndex], colSpan: eduPadding});
     }
 
     const nYears = years.map( year => {
@@ -140,9 +126,11 @@ function Timeline({experience, education}){
     });
 
     const nJobs = jobs.map( job => {
-        const tooltip = getTooltip(job.experience);
+
         if(job.name != ""){
-            return(<td className={job.experience.color} colspan={job.colspan}><Tooltip id="my-tooltip" /><a data-tooltip-id="my-tooltip" data-tooltip-html={ReactDOMServer.renderToStaticMarkup(tooltip)}>{job.experience.company}</a></td>);
+            const projectsArray =  {...job.experience.projects};
+            const tooltip = (<ExperienceTooltip projects={projectsArray}/>);
+            return(<td className={job.experience.color} colSpan={job.colSpan} style={{cursor: 'pointer'}}><Tooltip id="my-tooltip" clickable="true"/><a data-tooltip-id="my-tooltip" data-tooltip-html={ReactDOMServer.renderToStaticMarkup(tooltip)}>{job.experience.company}</a></td>);
         } else {
             return(<td></td>);
         }
@@ -150,7 +138,7 @@ function Timeline({experience, education}){
 
     const nSchools = schools.map( school => {
         if(school.name != ""){
-            return(<td className={school.education.color} colspan={school.colspan}><div onClick={() => alert(school.education.name)}>{school.education.abbreviation}</div></td>);
+            return(<td className={school.education.color} colSpan={school.colSpan}><div onClick={() => alert(school.education.name)}>{school.education.abbreviation}</div></td>);
         } else {
         return(<td></td>);
         }
@@ -161,17 +149,39 @@ function Timeline({experience, education}){
             <h2>Timeline</h2>
             <div className="timeline">
                 <table>
-                    <tr>
-                        {nJobs}
-                    </tr>
-                    <tr>
-                        {nYears}
-                    </tr>
-                    <tr>
-                        {nSchools}
-                    </tr>
+                    <tbody>
+                        <tr>
+                            {nJobs}
+                        </tr>
+                        <tr>
+                            {nYears}
+                        </tr>
+                        <tr>
+                            {nSchools}
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     );
 }
+
+function ExperienceTooltip(projects){
+        return (
+            <div>
+                <h3>Projects</h3>
+                <ul>
+                    { Object.values(projects.projects).map((description, key) => {
+                        return (<li key={key}>{description}</li>);
+                    })
+                    }
+                </ul>
+                <h3>Technologies</h3>
+                <ul>
+                     <li key="0">JAVA</li>
+                     <li key="1">Python</li>
+                     <li key="2">OCI</li>
+                 </ul>
+            </div>
+        );
+    }

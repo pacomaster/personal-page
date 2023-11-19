@@ -18,6 +18,19 @@ h2 {
   font-size: 20px;
 }
 
+.personal-info {
+justify-content: center;
+    text-align: center;
+}
+
+.description {
+    padding-top: 10px;
+    width: 50%;
+    text-align: justify;
+    overflow-wrap: break-word;
+    margin: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,8 +58,11 @@ ul {
     margin: 0 auto;
 }
 
-ul li{
-    width: 25%;
+ul li {
+    padding-top: 10px;
+    text-align: justify;
+    inline-size: 300px;
+    overflow-wrap: break-word;
 }
 
 .timeline {
