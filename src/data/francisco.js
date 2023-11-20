@@ -66,6 +66,7 @@ const cvData = [
                 "endDate": "2017-01-02T00:00:00.000Z",
             },
     ],
+    "languages" : ["Spanish", "English", "Japanese"]
     }
 ]
 

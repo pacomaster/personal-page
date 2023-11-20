@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Tooltip } from 'react-tooltip'
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import ReactDOMServer from 'react-dom/server';
 import passportPhoto from './img/passport.jpg';
 import cvData from './data/francisco.js';
@@ -9,12 +11,15 @@ export default function Main() {
     const personal = cvData[0];
     const experience = personal.experience;
     const education = personal.education;
+    const languages = personal.languages;
 
     return (
         <div className="main">
             <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} description={personal.description} />
             <hr className="solid"/>
             <Timeline experience={experience} education={education} />
+            <hr className="solid"/>
+            <Languages languages={languages}/>
         </div>
         );
 }
@@ -22,24 +27,39 @@ export default function Main() {
 function Menu(){
     return (
         <div className="menu">
-            <div><a href="PersonalInfo">Personal Info</a></div>
-            <div><a href="Timeline">Timeline</a></div>
+            <div><HashLink to='#PersonalInfo'>Personal Info</HashLink></div>
+            <div><HashLink to='#Timeline'>Timeline</HashLink></div>
+            <div><HashLink to='#Languages'>Languages</HashLink></div>
         </div>
     );
 }
 
 function PersonalInfo({name, birthday, phone, email, description}) {
     return (
-        <div className="personal-info">
+        <div id="PersonalInfo" className="personal-info">
             <h1>{name}</h1>
             <Menu />
             <div><img id='photo' src={passportPhoto} /></div>
             <div>
-                <div>{birthday}</div>
+                <div>{birthday.split("T")[0]}</div>
                 <div>{phone}</div>
                 <div>{email}</div>
             </div>
             <div className="description">{description}</div>
+        </div>
+        );
+}
+
+function Languages({languages}) {
+    return (
+        <div id="Languages" className="languages">
+            <h1>Languages</h1>
+            <ul>
+                { Object.values(languages).map((description, key) => {
+                    return (<li key={key}>{description}</li>);
+                })
+                }
+            </ul>
         </div>
         );
 }
@@ -129,7 +149,8 @@ function Timeline({experience, education}){
 
         if(job.name != ""){
             const projectsArray =  {...job.experience.projects};
-            const tooltip = (<ExperienceTooltip projects={projectsArray}/>);
+            const technologiesArray = {...job.experience.technologies};
+            const tooltip = (<ExperienceTooltip projects={projectsArray} technologies={technologiesArray}/>);
             return(<td className={job.experience.color} colSpan={job.colSpan} style={{cursor: 'pointer'}}><Tooltip id="my-tooltip" clickable="true"/><a data-tooltip-id="my-tooltip" data-tooltip-html={ReactDOMServer.renderToStaticMarkup(tooltip)}>{job.experience.company}</a></td>);
         } else {
             return(<td></td>);
@@ -145,7 +166,7 @@ function Timeline({experience, education}){
     });
 
     return(
-        <div>
+        <div id="Timeline">
             <h2>Timeline</h2>
             <div className="timeline">
                 <table>
@@ -166,21 +187,22 @@ function Timeline({experience, education}){
     );
 }
 
-function ExperienceTooltip(projects){
+function ExperienceTooltip(properties){
         return (
             <div>
                 <h3>Projects</h3>
                 <ul>
-                    { Object.values(projects.projects).map((description, key) => {
+                    { Object.values(properties.projects).map((description, key) => {
                         return (<li key={key}>{description}</li>);
                     })
                     }
                 </ul>
                 <h3>Technologies</h3>
                 <ul>
-                     <li key="0">JAVA</li>
-                     <li key="1">Python</li>
-                     <li key="2">OCI</li>
+                     { Object.values(properties.technologies).map((description, key) => {
+                         return (<li key={key}>{description}</li>);
+                     })
+                     }
                  </ul>
             </div>
         );
