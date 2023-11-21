@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Tooltip } from 'react-tooltip'
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import ReactDOMServer from 'react-dom/server';
 import passportPhoto from './img/passport.jpg';
 import cvData from './data/francisco.js';
+import Toggle from "react-toggle";
+import { useMediaQuery } from "react-responsive";
+import "react-toggle/style.css"
 
 
 export default function Main() {
@@ -14,7 +17,8 @@ export default function Main() {
     const languages = personal.languages;
 
     return (
-        <div className="main">
+        <div id="main">
+            <DarkModeToggle/>
             <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} description={personal.description} />
             <hr className="solid"/>
             <Timeline experience={experience} education={education} />
@@ -207,3 +211,32 @@ function ExperienceTooltip(properties){
             </div>
         );
     }
+
+const DarkModeToggle = () => {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    if (isDark) {
+      document.getElementById("main").classList.add('dark');
+    } else {
+      document.getElementById("main").classList.remove('dark');
+    }
+  }, [isDark]);
+
+  const systemPrefersDark = useMediaQuery(
+    {
+      query: "(prefers-color-scheme: dark)",
+    },
+    undefined,
+    (isSystemDark) => setIsDark(isSystemDark)
+  );
+
+  return (
+    <Toggle
+      checked={isDark}
+      onChange={({ target }) => setIsDark(target.checked)}
+      icons={{ checked: "🌙", unchecked: "🔆" }}
+      aria-label="Dark mode toggle"
+    />
+  );
+};

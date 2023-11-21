@@ -8,6 +8,23 @@ body {
   padding: 0;
 }
 
+#main {
+  text-align: center;
+  background-color: #fafafa;
+  color: #1f2023;
+}
+
+#main.dark {
+    text-align: center;
+    background-color: #1f2023;
+    color: #efefef;
+}
+
+@media (prefers-color-scheme: dark) {
+
+
+}
+
 h1 {
   margin-top: 0;
   font-size: 22px;
@@ -19,7 +36,7 @@ h2 {
 }
 
 .personal-info {
-justify-content: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -31,24 +48,9 @@ justify-content: center;
     margin: auto;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 #photo {
     text-align: center;
     width: 25%;
-
-}
-
-.main {
-    text-align: center;
 }
 
 ul {
