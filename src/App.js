@@ -28,13 +28,14 @@ export default function Main() {
         );
 }
 
-function Menu(){
+function MenuArea(){
     return (
         <div className="menu">
-            <div><HashLink to='#PersonalInfo'>Personal Info</HashLink></div>
-            <div><HashLink to='#Timeline'>Timeline</HashLink></div>
-            <div><HashLink to='#Languages'>Languages</HashLink></div>
+            <span><HashLink to='#PersonalInfo'>Personal Info</HashLink></span>
+            <span><HashLink to='#Timeline'>Timeline</HashLink></span>
+            <span><HashLink to='#Languages'>Languages</HashLink></span>
         </div>
+
     );
 }
 
@@ -42,7 +43,7 @@ function PersonalInfo({name, birthday, phone, email, description}) {
     return (
         <div id="PersonalInfo" className="personal-info">
             <h1>{name}</h1>
-            <Menu />
+            <MenuArea />
             <div><img id='photo' src={passportPhoto} /></div>
             <div>
                 <div>{birthday.split("T")[0]}</div>

@@ -53,6 +53,10 @@ h2 {
     width: 25%;
 }
 
+.menu span {
+    padding-right: 10px;
+}
+
 ul {
     padding-inline-start: 0;
     list-style-type: none;
