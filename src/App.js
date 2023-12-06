@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Tooltip } from 'react-tooltip'
 import { Link } from "react-router-dom";
+import Languages from './Languages/Languages'
 import { HashLink } from 'react-router-hash-link';
 import ReactDOMServer from 'react-dom/server';
 import passportPhoto from './img/passport.jpg';
@@ -55,19 +56,7 @@ function PersonalInfo({name, birthday, phone, email, description}) {
         );
 }
 
-function Languages({languages}) {
-    return (
-        <div id="Languages" className="languages">
-            <h1>Languages</h1>
-            <ul>
-                { Object.values(languages).map((description, key) => {
-                    return (<li key={key}>{description}</li>);
-                })
-                }
-            </ul>
-        </div>
-        );
-}
+
 
 function Timeline({experience, education}){
     const expStartYears = experience.map(job => (new Date(job.startDate)).getFullYear());
