@@ -16,7 +16,7 @@ export default function Languages({languages}) {
             <span>{t('japanese')}</span>
             <ul>
                 { Object.values(languages).map((description, key) => {
-                    return (<li data-testid={description} key={key}><button onClick={() => changeLang('ja')}>{t(description)}</button></li>);
+                    return (<li data-testid={description.lang} key={key}><button onClick={() => changeLang(description.code)}>{t(description.lang)}</button></li>);
                 })
                 }
             </ul>
