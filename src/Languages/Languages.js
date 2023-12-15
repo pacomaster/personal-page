@@ -14,6 +14,17 @@ export default function Languages ({languages}) {
         setIsChange("true");
     }
 
+    function getIcon(code){
+        if (code == "en"){
+            return usFlag;
+        } else if (code == "es"){
+            return mxFlag;
+        } else if (code == "ja"){
+            return jpFlag;
+        }
+        return usFlag;
+    }
+
     return (
         <div id="Languages" className="languages">
             <h1 data-testid="test-language">{t("language")}</h1>
@@ -21,7 +32,7 @@ export default function Languages ({languages}) {
                 { Object.values(languages).map((description, key) => {
                     return (
                         <span key={key}>
-                            <img src={usFlag} />
+                            <img src={getIcon(description.code)} />
                             <a data-testid={description.code}  onClick={() => changeLang(description.code)}>{t(description.lang)}</a>
                         </span>
                         );
