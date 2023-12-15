@@ -6,12 +6,18 @@ const cvData = [
       "email": "fco_amezcua@hotmail.com",
       "phone": "3311356376",
       "photo": "",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "description": "As a senior developer I am excited to learn new technologies and implement my knowledge in new and exciting projects. I want to become a developer that others may look for help maybe not as the leader of the team but someone that everyone in the team may count on it. I enjoy learning about new technologies like AI, Big data, microservices or blockchain and I would like to specialized in one of those in the future.",
       "experience": [
         {
             "id": 1,
             "company": "Flex",
             "roles": ["Intern"],
+            "projects" : [
+                "Lorem ipsum dolor Flex 1.",
+                "Lorem ipsum dolor Flex 2."
+            ],
+            "technologies" : ["ASP.NET", "C#"],
+            "color": "green",
             "startDate": "2010-01-02T00:00:00.000Z",
             "endDate": "2011-01-02T00:00:00.000Z",
         },
@@ -19,6 +25,9 @@ const cvData = [
             "id": 2,
             "company": "HP",
             "roles": ["Software developer Jr.", "Software developer Sr."],
+            "projects" : ["Lorem ipsum dolor HP 1."],
+            "technologies" : ["Java", "Jquery"],
+            "color": "blue",
             "startDate": "2011-01-02T00:00:00.000Z",
             "endDate": "2016-01-02T00:00:00.000Z",
         },
@@ -26,6 +35,13 @@ const cvData = [
             "id": 3,
             "company": "Oracle",
             "roles": ["Software developer 3"],
+            "projects" : [
+                 "Lorem ipsum dolor Oracle 1.",
+                 "Lorem ipsum dolor Oracle 2.",
+                 "Lorem ipsum dolor Oracle 3."
+             ],
+            "technologies" : ["Java", "python", "OCI"],
+            "color": "red",
             "startDate": "2016-01-02T00:00:00.000Z",
             "endDate": "",
         }
@@ -36,6 +52,7 @@ const cvData = [
               "name": "Universidad del Valle de Mexico",
               "abbreviation": "UVM",
               "degree": "Ing. Computer Systems",
+              "color": "red",
               "startDate": "2007-01-02T00:00:00.000Z",
               "endDate": "2011-01-02T00:00:00.000Z",
           },
@@ -43,11 +60,17 @@ const cvData = [
                 "id": 2,
                 "name": "Instituto Tecnologico y de Estudios Superiores de Occidente",
                 "abbreviation": "ITESO",
+                "color": "blue",
                 "degree": "Master Computer Science",
-                "startDate": "2016-01-02T00:00:00.000Z",
-                "endDate": "2018-01-02T00:00:00.000Z",
+                "startDate": "2015-01-02T00:00:00.000Z",
+                "endDate": "2017-01-02T00:00:00.000Z",
             },
     ],
+    "languages" : [
+        {"code":"en","lang":"english"},
+        {"code":"es","lang":"spanish"},
+        {"code":"ja","lang":"japanese"}
+        ]
     }
 ]
 

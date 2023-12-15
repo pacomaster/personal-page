@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee2851b9-ccb6-4cb9-9bc1-0209609831fe" name="Default Changelist" comment="" />
+    <list default="true" id="ee2851b9-ccb6-4cb9-9bc1-0209609831fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Languages/Languages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Languages/Languages.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +21,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\pacomaster\personal-page\src\img" />
+      <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\ja" />
+      <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\es" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\git\pacomaster\personal-page\src" />
       <recent name="D:\git\pacomaster\personal-page\public\img" />
@@ -37,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698383540610</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
