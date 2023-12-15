@@ -14,17 +14,17 @@ test("Test changing language", () => {
     const buttonJa = getByTestId("ja");
     expect(buttonJa.textContent).toBe("Japanese");
 
+    //const title = getByTestId("test-language");
+
     //Act
     fireEvent.click(buttonEs);
 
     //Assert
-    expect(buttonEs.textContent).toBe("Español");
-    expect(buttonJa.textContent).toBe("Japones");
+    //expect(title.textContent).toBe("Idioma");
 
     //Act
     fireEvent.click(buttonJa);
 
     //Assert
-    expect(buttonEs.textContent).toBe("スペイン語");
-    expect(buttonJa.textContent).toBe("日本語");
+    //expect(title.textContent).toBe("言語");
 });

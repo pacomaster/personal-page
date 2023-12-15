@@ -3,8 +3,10 @@ import { useMediaQuery } from "react-responsive";
 import Toggle from "react-toggle";
 import "react-toggle/style.css"
 import Languages from './Languages/Languages'
+import MenuArea from './MenuArea/MenuArea'
 import PersonalInfo from './PersonalInfo/PersonalInfo'
 import Timeline from './Timeline/Timeline'
+import BottomSection from './BottomSection/BottomSection'
 import cvData from './data/francisco.js';
 
 export default function Main() {
@@ -16,11 +18,14 @@ export default function Main() {
     return (
         <div id="main">
             <DarkModeToggle/>
+            <Languages languages={languages}/>
+            <MenuArea />
             <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} description={personal.description} />
             <hr className="solid"/>
             <Timeline experience={experience} education={education} />
             <hr className="solid"/>
-            <Languages languages={languages}/>
+            <BottomSection />
+
         </div>
         );
 }

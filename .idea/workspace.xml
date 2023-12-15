@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee2851b9-ccb6-4cb9-9bc1-0209609831fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PersonalInfo/PersonalInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Timeline/Timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BottomSection/BottomSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MenuArea/MenuArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/icons8-japan-30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/icons8-mexico-30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/icons8-usa-30.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Languages/Languages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Languages/Languages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Languages/Languages.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Languages/Languages.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PersonalInfo/PersonalInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersonalInfo/PersonalInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/en/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/en/translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/es/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/es/translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/ja/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/ja/translations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +32,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/i18n/locales/ja" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\pacomaster\personal-page\src\img" />
       <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\ja" />
       <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\es" />
     </key>
