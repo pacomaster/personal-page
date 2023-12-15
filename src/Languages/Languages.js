@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/config';
 
-
-
-export default function Languages({languages}) {
+export default function Languages ({languages}) {
     const { i18n, t } = useTranslation();
     const [isChange, setIsChange] = useState("false");
 
