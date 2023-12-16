@@ -1,9 +1,9 @@
-import OptionsMenu from './OptionsMenu/OptionsMenu'
-import MenuArea from './MenuArea/MenuArea'
-import PersonalInfo from './PersonalInfo/PersonalInfo'
-import Summary from './Summary/Summary'
-import Timeline from './Timeline/Timeline'
-import BottomSection from './BottomSection/BottomSection'
+import OptionsMenu from './components/OptionsMenu/OptionsMenu'
+import MenuArea from './components/MenuArea/MenuArea'
+import PersonalInfo from './components/PersonalInfo/PersonalInfo'
+import Summary from './components/Summary/Summary'
+import Experience from './components/Experience/Experience'
+import BottomSection from './components/BottomSection/BottomSection'
 import cvData from './data/francisco.js';
 
 export default function Main() {
@@ -20,7 +20,7 @@ export default function Main() {
             <hr className="solid"/>
             <Summary summary={personal.description}/>
             <hr className="solid"/>
-            <Timeline experience={experience} education={education} />
+            <Experience experience={experience}/>
             <hr className="solid"/>
             <BottomSection />
 

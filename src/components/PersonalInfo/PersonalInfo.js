@@ -1,4 +1,4 @@
-import passportPhoto from '../img/passport.jpg';
+import passportPhoto from './img/passport.jpg';
 
 export default function PersonalInfo ({name, birthday, phone, email, description}) {
     return (

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import '../i18n/config';
-import usFlag from '../img/icons8-usa-30.png';
-import mxFlag from '../img/icons8-mexico-30.png';
-import jpFlag from '../img/icons8-japan-30.png';
+import '../../i18n/config';
+import usFlag from './icons/icons8-usa-30.png';
+import mxFlag from './icons/icons8-mexico-30.png';
+import jpFlag from './icons/icons8-japan-30.png';
 
 export default function Languages ({languages}) {
     const { i18n, t } = useTranslation();
