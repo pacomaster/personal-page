@@ -91,3 +91,13 @@ td.red {
 td.green {
     border: 3px solid green;
 }
+
+.react-toggle-track-x {
+    margin-bottom: 2px !important;
+    margin-right: 2px !important;
+}
+
+.react-toggle-track-check {
+    margin-bottom: 2px !important;
+    margin-left: -2px !important;
+}
