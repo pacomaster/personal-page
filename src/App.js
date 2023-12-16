@@ -3,6 +3,7 @@ import MenuArea from './components/MenuArea/MenuArea'
 import PersonalInfo from './components/PersonalInfo/PersonalInfo'
 import Summary from './components/Summary/Summary'
 import Experience from './components/Experience/Experience'
+import Education from './components/Education/Education'
 import BottomSection from './components/BottomSection/BottomSection'
 import cvData from './data/francisco.js';
 
@@ -21,6 +22,8 @@ export default function Main() {
             <Summary summary={personal.description}/>
             <hr className="solid"/>
             <Experience experience={experience}/>
+            <hr className="solid"/>
+            <Education education={education}/>
             <hr className="solid"/>
             <BottomSection />
 

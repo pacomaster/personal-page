@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee2851b9-ccb6-4cb9-9bc1-0209609831fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Experience/Experience.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Education/Education.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BottomSection/BottomSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomSection/BottomSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Languages/Languages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/Languages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Languages/Languages.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/Languages.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuArea/MenuArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuArea/MenuArea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptionsMenu/OptionsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OptionsMenu/OptionsMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PersonalInfo/PersonalInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalInfo/PersonalInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Summary/Summary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timeline/Timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Timeline/Timeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/icons8-japan-30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/icons/icons8-japan-30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/icons8-mexico-30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/icons/icons8-mexico-30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/icons8-usa-30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/icons/icons8-usa-30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/passport.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalInfo/img/passport.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
