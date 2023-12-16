@@ -66,6 +66,21 @@ const cvData = [
                 "endDate": "2017-01-02T00:00:00.000Z",
             },
     ],
+    "skills" : [
+        {"id": 1, "name": "Java"},
+        {"id": 2, "name": "Javascript"},
+        {"id": 3, "name": "Linux"}
+    ],
+    "strengths" : [
+        {"id": 1, "title": "Java", "summary": "summary"},
+        {"id": 2, "title": "Javascript", "summary": "summary"},
+        {"id": 3, "title": "Linux", "summary": "summary"}
+    ],
+    "certifications" : [
+        {"id": 1, "name": "Java", "school": "summary", "year": 2010},
+        {"id": 2, "name": "Javascript", "school": "summary", "year": 2015},
+        {"id": 3, "name": "Linux", "school": "summary", "year": 2020}
+    ],
     "languages" : [
         {"code":"en","lang":"english"},
         {"code":"es","lang":"spanish"},
