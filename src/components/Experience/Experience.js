@@ -1,3 +1,5 @@
+import "./Experience.css"
+
 export default function Experience({experience}){
     return (
         <div id="experience">
@@ -18,7 +20,6 @@ export default function Experience({experience}){
                     </li>
                 ))}
             </ul>
-
         </div>
     );
 }
