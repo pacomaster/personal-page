@@ -2,6 +2,7 @@ const cvData = [
     {
       "id": 1,
       "name": "Francisco Javier Amezcua Garcia",
+      "position": "Software Developer",
       "birthday": "1988-08-16T00:00:00.000Z",
       "email": "fco_amezcua@hotmail.com",
       "phone": "3311356376",
@@ -11,7 +12,9 @@ const cvData = [
         {
             "id": 1,
             "company": "Flex",
-            "roles": ["Intern"],
+            "role": "Intern",
+            "location" : "Zapopan, MX",
+            "summary": "Lorem ipsum dolor",
             "projects" : [
                 "Lorem ipsum dolor Flex 1.",
                 "Lorem ipsum dolor Flex 2."
@@ -24,7 +27,9 @@ const cvData = [
         {
             "id": 2,
             "company": "HP",
-            "roles": ["Software developer Jr.", "Software developer Sr."],
+            "role": "Software developer Jr.",
+            "location" : "Zapopan, MX",
+            "summary": "Lorem ipsum dolor",
             "projects" : ["Lorem ipsum dolor HP 1."],
             "technologies" : ["Java", "Jquery"],
             "color": "blue",
@@ -34,7 +39,9 @@ const cvData = [
         {
             "id": 3,
             "company": "Oracle",
-            "roles": ["Software developer 3"],
+            "role": "Software developer 3",
+            "location" : "Zapopan, MX",
+            "summary": "Lorem ipsum dolor",
             "projects" : [
                  "Lorem ipsum dolor Oracle 1.",
                  "Lorem ipsum dolor Oracle 2.",

@@ -23,7 +23,7 @@ export default function Main() {
         <div id="main">
             <OptionsMenu languages={languages}/>
             <MenuArea />
-            <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email}/>
+            <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position}/>
             <hr className="solid"/>
             <Summary summary={personal.description}/>
             <hr className="solid"/>
