@@ -1,0 +1,14 @@
+ul#skills_list{
+    padding-inline-start: 0;
+    list-style-type: none;
+    display: table;
+    margin: 0 auto;
+
+}
+
+.skill_name{
+    color: #276880;
+    font-weight: bold;
+    margin-left: 25px;
+
+}

@@ -1,10 +1,17 @@
+import "./Education.css";
+
 export default function Education({education}){
     return (
         <div id="education">
             <h1>Education</h1>
-            <ul>
+            <ul id="education_list">
                 {education.map(school => (
-                    <li>{school.name} : {(new Date(school.startDate)).getFullYear()} - {(new Date(school.endDate)).getFullYear()}</li>
+                    <li>
+                        <div class="school_degree">{school.degree}</div>
+                        <div class="school_name">{school.abbreviation}</div>
+                        <div class="school_grade">{school.grade} / 100</div>
+                        <hr className="dotted"/>
+                    </li>
                 ))}
             </ul>
         </div>
