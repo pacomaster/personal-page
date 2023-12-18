@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useMediaQuery } from "react-responsive";
 import Toggle from "react-toggle";
 import "react-toggle/style.css"
+import "./OptionsMenu.css"
 import Languages from '../Languages/Languages'
 
 export default function OptionsMenu ({languages}){
