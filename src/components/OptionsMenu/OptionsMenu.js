@@ -4,12 +4,30 @@ import Toggle from "react-toggle";
 import "react-toggle/style.css"
 import "./OptionsMenu.css"
 import Languages from '../Languages/Languages'
+import optionsIcon from './icons/icons8-options-64.png';
 
 export default function OptionsMenu ({languages}){
+    function openOptions() {
+        console.log("open");
+        document.getElementById("mySideoptions").style.width = "250px";
+        }
+
+    function closeOptions() {
+        console.log("close");
+        document.getElementById("mySideoptions").style.width = "0";
+        }
+
     return (
         <div id="options-menu">
-            <DarkModeToggle/>
-            <Languages languages={languages}/>
+            <div id="mySideoptions" class="sideoptions">
+                <a href="javascript:void(0)" class="closebtn" onClick={() => closeOptions() }>&times;</a>
+                <DarkModeToggle/>
+                <Languages languages={languages}/>
+            </div>
+
+
+
+            <span style={{fontSize: '30px', cursor: 'pointer'}} onClick={() => openOptions() }><img src={optionsIcon}/></span>
         </div>
     );
 }

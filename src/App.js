@@ -20,24 +20,13 @@ export default function Main() {
     const strengths = personal.strengths;
     const certifications = personal.certifications;
 
-    const [optionsMenuOpen, setOptionsMenuOpen] = useState(false);
-
-    useEffect(() => {
-        if (optionsMenuOpen) {
-          document.getElementById("optionsMenu").classList.remove('invisible');
-        } else {
-          document.getElementById("optionsMenu").classList.add('invisible');
-        }
-      }, [optionsMenuOpen]);
-
     return (
         <div id="main">
-            <div id="optionsMenu">
-                <OptionsMenu languages={languages}/>
-            </div>
-            <button id="menuButton" type="button" onClick={() => setOptionsMenuOpen(!optionsMenuOpen) }>Menu</button>
-            <MenuArea />
-            <PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position}/>
+            <span className="left"><MenuArea/></span>
+            <span className="right"><OptionsMenu languages={languages}/></span>
+            <span><PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position}/></span>
+
+
             <hr className="solid"/>
             <Summary summary={personal.description}/>
             <hr className="solid"/>
