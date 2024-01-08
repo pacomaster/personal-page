@@ -6,12 +6,12 @@ ul#education_list{
 }
 
 .school_degree {
-    color: #276880;
+    color: var(--bold-color);
     font-weight: bold;
 }
 
 .school_name {
-    color: #E91E63;
+    color: var(--regular-color);
     padding-top: 5px;
     padding-bottom: 5px;
 }

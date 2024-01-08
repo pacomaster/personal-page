@@ -1,3 +1,4 @@
+import './PersonalInfo.css';
 import passportPhoto from './img/passport.jpg';
 
 export default function PersonalInfo ({name, birthday, phone, email, position}) {
@@ -6,7 +7,7 @@ export default function PersonalInfo ({name, birthday, phone, email, position}) 
             <h1>{name}</h1>
             <div><img id='photo' src={passportPhoto} /></div>
             <div>
-                <div>{position}</div>
+                <div class="position">{position}</div>
                 <div>{birthday.split("T")[0]}</div>
                 <div>{phone}</div>
                 <div>{email}</div>

@@ -22,7 +22,7 @@ export default function OptionsMenu ({languages}){
             <div id="mySideoptions" class="sideoptions">
                 <a href="javascript:void(0)" class="closebtn" onClick={() => closeOptions() }>&times;</a>
                 <DarkModeToggle/>
-                <Languages languages={languages}/>
+                <div class="dark_mode_toggle_text">Dark mode</div>
             </div>
 
 

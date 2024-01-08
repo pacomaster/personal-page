@@ -36,3 +36,8 @@
   .sideoptions {padding-top: 15px;}
   .sideoptions a {font-size: 18px;}
 }
+
+.dark_mode_toggle_text {
+  font-size: 25px;
+  color: #818181;
+}

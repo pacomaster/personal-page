@@ -1,3 +1,8 @@
+:root {
+  --bold-color: #4E9F3D;
+  --regular-color: #A13333;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +17,11 @@ body {
   text-align: center;
   background-color: #fafafa;
   color: #1f2023;
+}
+
+#main > div {
+  margin: auto;
+  width: 75%;
 }
 
 #main.dark {
@@ -42,7 +52,6 @@ h2 {
 
 .description {
     padding-top: 10px;
-    width: 75%;
     text-align: justify;
     overflow-wrap: break-word;
     margin: auto;
@@ -66,7 +75,6 @@ ul {
 ul li {
     padding-top: 10px;
     text-align: justify;
-    inline-size: 400px;
     overflow-wrap: break-word;
 }
 

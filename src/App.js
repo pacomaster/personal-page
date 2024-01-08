@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import OptionsMenu from './components/OptionsMenu/OptionsMenu'
 import MenuArea from './components/MenuArea/MenuArea'
 import PersonalInfo from './components/PersonalInfo/PersonalInfo'
@@ -25,7 +24,6 @@ export default function Main() {
             <span className="left"><MenuArea/></span>
             <span className="right"><OptionsMenu languages={languages}/></span>
             <span><PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position}/></span>
-
 
             <hr className="solid"/>
             <Summary summary={personal.description}/>

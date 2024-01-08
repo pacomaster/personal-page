@@ -6,6 +6,6 @@ ul#certifications_list{
 }
 
 .certification_name {
-    color: #E91E63;
+    color: var(--regular-color);
     font-weight: bold;
 }

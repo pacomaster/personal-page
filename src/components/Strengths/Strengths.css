@@ -6,6 +6,6 @@ ul#strengths_list{
 }
 
 .strength_name {
-    color: #276880;
+    color: var(--bold-color);
     font-weight: bold;
 }

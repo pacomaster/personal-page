@@ -8,17 +8,17 @@ ul#experience_list{
 ul.company_projects{
     padding-inline-start: 0;
     display: table;
-    margin: 0 auto;
+    margin: 20px;
     padding-left: 20px;
 }
 
 .company_role {
-    color: #276880;
+    color: var(--bold-color);
     font-weight: bold;
 }
 
 .company_name {
-    color: #E91E63;
+    color: var(--regular-color);
     padding-top: 5px;
     padding-bottom: 5px;
 }
