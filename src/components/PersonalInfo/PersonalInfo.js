@@ -1,5 +1,5 @@
 import './PersonalInfo.css';
-import passportPhoto from './img/passport.jpg';
+import passportPhoto from './img/passport.png';
 
 export default function PersonalInfo ({name, birthday, phone, email, position}) {
     return (
