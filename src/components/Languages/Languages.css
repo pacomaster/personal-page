@@ -1,0 +1,10 @@
+#Languages > table{
+    margin: auto;
+}
+
+
+.lang {
+    cursor: pointer;
+    vertical-align: middle;
+}
+

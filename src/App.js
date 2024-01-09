@@ -8,6 +8,7 @@ import Skills from './components/Skills/Skills'
 import Strengths from './components/Strengths/Strengths'
 import Certifications from './components/Certifications/Certifications'
 import BottomSection from './components/BottomSection/BottomSection'
+import Languages from './components/Languages/Languages'
 import cvData from './data/francisco.js';
 
 export default function Main() {
@@ -23,7 +24,7 @@ export default function Main() {
         <div id="main">
             <span className="left"><MenuArea/></span>
             <span className="right"><OptionsMenu languages={languages}/></span>
-            <span><PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position}/></span>
+            <span><PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position} github={personal.github}/></span>
 
             <hr className="solid"/>
             <Summary summary={personal.description}/>
@@ -37,6 +38,8 @@ export default function Main() {
             <Strengths strengths={strengths}/>
             <hr className="solid"/>
             <Certifications certifications={certifications}/>
+            <hr className="solid"/>
+            <Languages languages={languages}/>
             <hr className="solid"/>
             <BottomSection />
 

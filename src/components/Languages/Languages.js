@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Languages.css';
 import { useTranslation } from 'react-i18next';
 import '../../i18n/config';
 import usFlag from './icons/icons8-usa-30.png';
@@ -28,17 +29,25 @@ export default function Languages ({languages}) {
     return (
         <div id="Languages" className="languages">
             <h1 data-testid="test-language">{t("language")}</h1>
-            <ul>
+            <table>
                 { Object.values(languages).map((description, key) => {
                     return (
-                        <span key={key}>
-                            <img src={getIcon(description.code)} />
-                            <a data-testid={description.code}  onClick={() => changeLang(description.code)}>{t(description.lang)}</a>
-                        </span>
+                        <tr>
+                            <td>
+                                <span class="img">
+                                    <img src={getIcon(description.code)} />
+                                </span>
+                            </td>
+                            <td>
+                                <span class="link">
+                                    <a className="lang" data-testid={description.code}  onClick={() => changeLang(description.code)}>{t(description.lang)}</a>
+                                </span>
+                            </td>
+                        </tr>
                         );
                 })
                 }
-            </ul>
+            </table>
         </div>
         );
 }

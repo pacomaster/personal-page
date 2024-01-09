@@ -2,3 +2,7 @@
     color: var(--bold-color);
     font-weight: bold;
 }
+
+#description {
+    text-align: justify;
+}

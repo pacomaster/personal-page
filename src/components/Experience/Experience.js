@@ -9,7 +9,7 @@ export default function Experience({experience}){
                     <li>
                         <div class="company_role">{job.role}</div>
                         <div class="company_name">{job.company}</div>
-                        <span class="company_time">Time: {(new Date(job.startDate)).getFullYear()} - {(new Date(job.endDate)).getFullYear()}</span>
+                        <span class="company_time">Time: {(new Date(job.startDate)).getFullYear()} - {job.endDate === "" ? "Current" : (new Date(job.endDate)).getFullYear()}</span>
                         <span class="company_location">Location: {job.location}</span>
                         <div class="company_summary">{job.summary}</div>
                         <ul class="company_projects">

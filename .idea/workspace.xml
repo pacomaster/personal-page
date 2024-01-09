@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee2851b9-ccb6-4cb9-9bc1-0209609831fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Languages/Languages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PersonalInfo/icons/icons8-github-50.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Experience/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience/Experience.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Languages/Languages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Languages/Languages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalInfo/PersonalInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalInfo/PersonalInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalInfo/PersonalInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalInfo/PersonalInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalInfo/img/passport.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalInfo/img/passport.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/francisco.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/francisco.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/en/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/en/translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/locales/es/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/locales/es/translations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +31,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/OptionsMenu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/PersonalInfo/icons" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\pacomaster\personal-page\src\components\PersonalInfo\icons" />
+      <recent name="D:\git\pacomaster\personal-page\src\components\PersonalInfo\img" />
       <recent name="D:\git\pacomaster\personal-page\src\components\OptionsMenu" />
       <recent name="D:\git\pacomaster\personal-page\src\components\MenuArea" />
       <recent name="D:\git\pacomaster\personal-page\src\img" />
-      <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\ja" />
-      <recent name="D:\git\pacomaster\personal-page\src\i18n\locales\es" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\git\pacomaster\personal-page\src\components\MenuArea\icons" />

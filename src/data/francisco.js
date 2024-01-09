@@ -5,7 +5,8 @@ const cvData = [
       "position": "Software Developer",
       "birthday": "1988-08-16T00:00:00.000Z",
       "email": "fco_amezcua@hotmail.com",
-      "phone": "3311356376",
+      "phone": "(+52) 3311356376",
+      "github": "https://github.com/pacomaster",
       "photo": "",
       "description": "Proactive software developer with over 13 years of experience at global tech companies, eager to learn and deliver new products to customers using the latest technologies like cloud, microservices, Ai and big data.",
       "experience": [
