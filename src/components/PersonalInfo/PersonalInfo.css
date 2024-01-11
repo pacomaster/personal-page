@@ -6,3 +6,11 @@
 #description {
     text-align: justify;
 }
+
+.links {
+    margin: auto;
+}
+
+.link_icon {
+    width: 50px;
+}

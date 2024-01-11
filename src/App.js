@@ -24,7 +24,7 @@ export default function Main() {
         <div id="main">
             <span className="left"><MenuArea/></span>
             <span className="right"><OptionsMenu languages={languages}/></span>
-            <span><PersonalInfo name={personal.name} birthday={personal.birthday} phone={personal.phone} email={personal.email} position={personal.position} github={personal.github}/></span>
+            <span><PersonalInfo name={personal.name} birthday={personal.birthday} email={personal.email} position={personal.position} github={personal.github} linkedIn={personal.linkedIn} /></span>
 
             <hr className="solid"/>
             <Summary summary={personal.description}/>
