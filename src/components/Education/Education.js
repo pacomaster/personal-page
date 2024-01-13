@@ -9,7 +9,7 @@ export default function Education({education}){
                     <li>
                         <div class="school_degree">{school.degree}</div>
                         <div class="school_name">{school.abbreviation}</div>
-                        <div class="school_grade">{school.grade} / 100</div>
+                        <div class="school_grade">{school.grade} / 10</div>
                         <hr className="dotted"/>
                     </li>
                 ))}
